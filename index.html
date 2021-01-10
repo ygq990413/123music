@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>网不抑云</title>
+    <style>
+        body{
+            background-image: url("./img/背景.png");
+            background-repeat: no-repeat;
+            background-size: cover;
+            /*height: 100%;*/
+            /*width: auto;*/
+        }
+    </style>
+    <link href="css/index.css" rel="stylesheet" type="text/css" media="all">
+</head>
+<body>
+<!--身体-->
+<div class="body" id="app">
+    <!--头-->
+    <div class="head">
+        <span class="title">网不抑云</span>
+        <span>
+            <input class="text" type="text" placeholder="搜索音乐" v-model="query" @keyup.enter="querySong">
+            <img class="searchImg" src="./img/搜索.png">
+        </span>
+    </div>
+    <!--肚-->
+    <div class="middle">
+        <!-- 歌曲列表 -->
+        <div class="songslist">
+            <ul>
+                <li v-for="(item,index) in songs">
+                    <img class="play" :src="playimg" @click="songPlay(item.url,item.img)"
+                        :index = "index"    @mouseenter="playred(index)" @mouseout="playblank(index)">
+                    <span id="fontcolor" class="songFont"> {{ item.name }}</span>
+<!--                    <img class="playMv" src="img/播放mv.png">-->
+                </li>
+            </ul>
+        </div>
+        <div class="audio">
+            <audio :src="songUrl" autoplay muted>{{songUrl}}
+            </audio>
+        </div>
+        <!-- 专辑板 -->
+        <div class="song">
+            <img :src="img" class="photo">
+            <img src="img/cd.png" :class="cd">
+            <img src="img/播放杆.png" class="rod">
+        </div>
+    </div>
+<!--    尾-->
+    <div class="foot">
+        <img class="presong" v-bind:src="message1" @mouseenter="palypre1()" @mouseout="palypre2()">
+        <img class="playsong" :src="message3" @click="paly(flag)">
+        <img class="nextsong" v-bind:src="message2" @mouseenter="palynext1()" @mouseout="palynext2()">
+    </div>
+    <div><a href="index02.html"target="_blank">联系我们</a></div>
+</div>
+</body>
+<script src="js/vue.js"></script>
+<script src="js/vue-route.js"></script>
+<script src="js/axios.js"></script>
+<script src="js/jquery-3.5.1.min.js"></script>
+<script src="vue/index.js"></script>
+</html>

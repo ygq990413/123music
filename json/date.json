@@ -1,0 +1,28 @@
+{
+  "林俊杰": [
+    {
+      "name": "关键词",
+      "url": "./music/关键词.mp4",
+      "img": "./img/和自己对话.png",
+      "playimg": "img/播放.png"
+    },
+    {
+      "name": "可惜没如果" ,
+      "url": "./music/可惜没如果.mp4",
+      "img": "./img/新地球.png",
+      "playimg": "img/播放.png"
+    },
+    {
+      "name": "手心的蔷薇",
+      "url": "./music/手心的蔷薇.mp4",
+      "img": "./img/旧地球.png",
+      "playimg": "img/播放.png"
+    },
+    {
+      "name": "背对背拥抱",
+      "url": "./music/背对背拥抱.mp4",
+      "img": "./img/100天.png",
+      "playimg": "img/播放.png"
+    }
+  ]
+}
